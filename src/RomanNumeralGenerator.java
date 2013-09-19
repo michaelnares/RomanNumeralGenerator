@@ -65,28 +65,37 @@ public void convertAndDisplayNumber() {
         romanNumerals.put(1, "I");
 
     int nextKeyDown = romanNumerals.floorKey(numberAsInt);
-       System.out.println("nextKeyDown is " + nextKeyDown);
-       int remainder = numberAsInt - nextKeyDown;
 
-    while (remainder != 0) {
+
+
+    while (true) {
 
     String nextCharDown = romanNumerals.get(nextKeyDown);
-    System.out.println(nextCharDown);
-    remainder = numberAsInt - nextKeyDown;
+    System.out.print(nextCharDown);
+   int remainder = numberAsInt - nextKeyDown;
+
+        if (remainder > 0 ) {
+
     nextKeyDown = romanNumerals.floorKey(remainder);
     numberAsInt = remainder;
 
     }
 
-
-    }
-
-
-
-
+        else {
+            System.out.println();
+            break;
+        }
 
 
     }
+
+
+
+
+
+
+    }
+}
 
 
 
