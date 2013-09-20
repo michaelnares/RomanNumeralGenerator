@@ -66,13 +66,11 @@ public void convertAndDisplayNumber() {
 
     int nextKeyDown = romanNumerals.floorKey(numberAsInt);
 
-
-
     while (true) {
 
     String nextCharDown = romanNumerals.get(nextKeyDown);
     System.out.print(nextCharDown);
-   int remainder = numberAsInt - nextKeyDown;
+    int remainder = numberAsInt - nextKeyDown;
 
         if (remainder > 0 ) {
 
@@ -85,28 +83,26 @@ public void convertAndDisplayNumber() {
             System.out.println();
             break;
         }
-
-
     }
 
-
-
-
-
-
-    }
+   }
 }
 
 
 
 
-        public static void main(String[] arguments) {
+    public static void main(String[] arguments) {
 
         RomanNumeralGenerator rng = new RomanNumeralGenerator();
         rng.convertAndDisplayNumber();
 
     }
 }
+
+
+
+
+
 
 
 
